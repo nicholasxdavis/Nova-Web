@@ -16,13 +16,7 @@
     align-items: center;
     height: 100vh;
   }
-  @media (max-width: 500px) {
-    .ad-panel-left, .ad-panel-right {
-      width: 50px;
-      height: 50px;
-      margin: 5px;
-      padding: 5px;
-    }
+
   .coming-soon {
     color: white;
     font-size: 3rem;
@@ -92,25 +86,31 @@
     font-size: 16px;
     color: #333;
   }
-  .ad-panel-left, .ad-panel-right {
-width: 200px;
-/* Adjust width as needed */
-height: 400px;
-/* Adjust height as needed */
-margin: 10px;
-/* Adjust margin as needed */
-padding: 10px;
-/* Adjust padding as needed */
-position: fixed;
-top: 50%;
-transform: translateY(-50%);
-/* Add additional styling as needed */
+.ad-panel-left, .ad-panel-right {
+    width: 200px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin: 10px; /* Adjust margin as needed */
+    padding: 10px; /* Adjust padding as needed */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Add additional styling as needed */
 }
+
 .ad-panel-left {
-left: 0;
+    left: 0;
 }
+
 .ad-panel-right {
-right: 0;
+    right: 0;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .ad-panel-left, .ad-panel-right {
+        width: 120px; /* 60% smaller width */
+        height: 240px; /* 60% smaller height */
+    }
 }
 </style>
 </head>
