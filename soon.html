@@ -110,6 +110,50 @@
     .ad-panel-left, .ad-panel-right {
         display: none;
     }
+    @media only screen and (max-width: 768px) {
+    /* Common styling for both title links */
+    .title-link {
+        margin: 0 10px;
+        font-size: 14px; /* Smaller font size */
+        font-weight: bold;
+        color: #8A2BE2;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 5px;
+        border: 2px solid #8A2BE2; /* Outline the text */
+        border-radius: 4px;
+        text-decoration-thickness: 2px; /* Increase the thickness of the underline */
+    }
+
+    /* Hover effect for title links */
+    .title-link:hover {
+        background-color: #8A2BE2;
+        color: #FFFFFF;
+    }
+
+    /* Container for title elements */
+    #title-container {
+        text-align: center;
+        margin: 10px 0;
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif; /* Apply a more professional font */
+    }
+
+    /* Specific styling for audio converter link */
+    #audioConverter {
+        color: #202020; /* Different color for Audio Converter */
+        border-color: #202020; /* Match border color */
+        border: none;
+        padding: 8px;
+        font-weight: bold;
+    }
+
+    /* Specific styling for video converter link */
+    #vidConverter {
+        /* This will inherit styles from .title-link */
+    }
 }
 </style>
 </head>
