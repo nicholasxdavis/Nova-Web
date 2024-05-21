@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blacnova's Audio Converter</title>
+    <link rel="icon" type="image/png" href="./icons/icon128.png">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+    <link rel="stylesheet" type="text/css" href="background/audio.css">
+</head>
+
+<body>
+	
+    <div id="ad-panel-left" class="ad-panel">
+        <!-- Left ad panel content here -->
+    </div>
+	<div id="title-container">
+        <span class="title-text" id="imgConverter"><a href="index.html" class="title-link">Image Converter</a></span>
+        <span class="title-text" id="videoConverter"><a href="video.html" class="title-link">Video Converter</a></span>
+		<a href="#" class="title-link" id="audioConverter">Audio Converter</a>
+        <span class="title-text" id="instaConverter"><a href="soon.html" class="title-link">Insta Downlaoder</a></span>
+        <span class="title-text" id="tiktokConverter"><a href="soon.html" class="title-link">TikTok Downloader</a></span>
+    </div>
+    <div id="logo-container">
+        <img src="./icons/main.png" alt="NOVA" width="100" height="100" id="logo">
+        <img src="./icons/main2.png" alt="NOVA2" width="100" height="100" id="logo2">
+    </div>
+    <div class="ad-panel-left">
+        <img src="./icons/ad_image_left.png" alt="Advertisement Left2" width="180" height="180">
+		<img src="./icons/ad_image_left.png" alt="Advertisement Left" width="180" height="180">
+    </div>
+
+    <div class="ad-panel-right">
+        <img src="./icons/ad_image_right.png" alt="Advertisement Right2" width="180" height="180">
+		<img src="./icons/ad_image_right.png" alt="Advertisement Right" width="180" height="180">
+    </div>
+	<div class="bottom-text">
+        If you're using an adblocker please consider disabling it! Our website is a free-to-use tool and relies on ads to support its operation.
+		<br>
+		Donate here: <a href="https://example.com/donate" target="_blank">Donate</a> 
+    </div>
+    <div id="whitelogo-container">
+        <img src="./icons/wmain.png" alt="wlogo" width="100" height="100" id="wlogo">
+        <img src="./icons/wmain2.png" alt="wlogo2" width="100" height="100" id="wlogo2">
+    </div>
+<div id="console" class="fallout-console">
+  <h2 id="console-title">Console</h2>
+  <div class="console-output"></div>
+  <input type="text" id="console-input" class="console-input" placeholder="Type here..." autofocus>
+</div>
+
+    <div id="darklight-mode">
+        <img src="./icons/dark.png" alt="DARK" width="50" height="50" id="dark">
+        <img src="./icons/light.png" alt="LIGHT" width="100" height="100" id="light">
+    </div>
+    <div class="header">
+    <img src="./icons/icon128.png" alt="miniLogo" width="50" height="50" id="miniLogo">
+    <label for="formatSelect">Output Format:</label>
+    <select id="formatSelect">
+        <option value="mp3">MP3</option>
+        <option value="wav">WAV</option>
+        <option value="m4a">M4a</option>
+		<option value="wma">WMA</option>
+		<option value="flac">FLAC</option>
+    </select>
+    <h2 id="webpToPngText">WAV to MP3</h2>
+	<img src="./icons/icon128.png" alt="miniLogo" width="50" height="50" id="miniLogo">
+    <button id="cancelButton" style="display: none; padding: 12px 35px; font-size: 18px; font-weight: bold; text-align: center; text-decoration: none; background-color: #FFFFFF; color: #8A2BE2; border: 2px solid #8A2BE2; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 5px;">Cancel</button>
+    <label for="fileInput" id="fileLabel" class="chooseFileButton">Choose File</label>
+    <input type="file" id="fileInput" accept="audio/mpeg, audio/wav, audio/mp4, audio/flac" multiple>
+    <button id="downloadButton" class="button" disabled>Download</button>
+    <br>
+</div>
+
+    <div id="versionInfo">Version 1.2.1</div>
+    <a href="settings.html">
+        <div id="authorInfo">Settings</div>
+    </a>
+
+    <!-- Include your script.js -->
+	<script src="background/audio.js"></script>
+	<script src="background/settings.js"></script>
+	<script src="background/console.js"></script>
+	<script src="background/hotkey.js"></script> 
+    <script src="background/jszip.js"></script> 
+</body>
+
+</html>

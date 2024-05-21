@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Professional, clean font */
+    background-color: #1a1a1a; /* Dark background for a futuristic look */
+    color: #ffffff; /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset some basic elements to ensure consistent styling across browsers */
+body, h1, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+    background: linear-gradient(135deg, #BB33FF, #4B0082); /* Gradient background */
+    color: white; /* Text color */
+    padding: 20px; /* Padding around the text */
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    margin-bottom: 20px; /* Space below the header */
+    border-bottom: 2px solid #4B0082; /* Add a bottom border for separation */
+}
+
+/* Style the h1 element within the header */
+header h1 {
+    font-size: 1; /* Larger font size */
+    font-weight: 600; /* Normal font weight */
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Uppercase text for impact */
+    letter-spacing: 1px; /* Add some spacing between letters */
+}
+
+main {
+    padding: 20px;
+    background-color: #262626; /* Slightly lighter background for the main content */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto; /* Center the main content */
+    max-width: 800px; /* Limit the width for readability */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+#downloadForm {
+    text-align: center;
+    margin: 20px 0; /* Space around the form */
+}
+
+#postUrl {
+    padding: 15px; /* More padding for a larger input */
+    margin-right: 10px;
+    width: 60%; /* Dynamic width for responsiveness */
+    border: 1px solid #BB33FF; /* Border color matching the theme */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #333; /* Dark background for input */
+    color: #fff; /* Light text color */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+#postUrl:focus {
+    border-color: #BB33FF; /* Change border color on focus */
+}
+
+#mybutton {
+    padding: 15px 30px; /* Larger button for better UX */
+    background: linear-gradient(135deg, #BB33FF, #4B0082); /* Gradient background */
+    color: #fff; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+#mybutton:hover {
+    background: linear-gradient(135deg, #4B0082, #BB33FF); /* Reversed gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+#mybutton:disabled {
+    background-color: #555; /* Different color for disabled state */
+    cursor: not-allowed;
+}
+
+#infoText {
+    text-align: center;
+    margin-top: 20px; /* Space above the info text */
+    font-size: 1.2em; /* Slightly larger font for readability */
+    color: #ccc; /* Lighter color for a softer look */
+}
+
+#infoText p {
+    margin: 0; /* Remove default margin */
+}
+#console-title {
+font-size: 18px;
+top: 0px;
+margin-bottom: 10px;
+color: white;
+/* Change this color to match your theme */
+text-align: center;
+}
+.fallout-console {
+position: fixed;
+top: 0;
+left: 0;
+width: 30%;
+/* 30% slimmer */
+height: 60%;
+/* 40% shorter */
+background-color: rgba(0, 0, 0, 0.8);
+/* Adjust opacity as needed */
+color: #ffffff;
+/* White text color */
+font-family: 'Courier New', Courier, monospace;
+display: none;
+/* Start hidden */
+border: 2px solid #BB33FF;
+box-sizing: border-box;
+/* Ensure border width is included in the width calculation */
+z-index: 9999;
+/* Ensure the console is on top of other elements */
+padding: 20px;
+}
+.console-output {
+max-height: calc(100% - 80px);
+/* Adjust the maximum height as needed */
+overflow-y: auto;
+}
+.console-input {
+width: calc(100% - 20px);
+/* Adjust the width to accommodate padding */
+background-color: transparent;
+border: none;
+color: #ffffff;
+/* White text color */
+outline: none;
+margin-top: 10px;
+}
+.ad-panel-left, .ad-panel-right {
+width: 200px;
+/* Adjust width as needed */
+height: 400px;
+/* Adjust height as needed */
+margin: 10px;
+/* Adjust margin as needed */
+padding: 10px;
+/* Adjust padding as needed */
+position: fixed;
+top: 50%;
+transform: translateY(-50%);
+/* Add additional styling as needed */
+}
+.ad-panel-left {
+left: 0;
+}
+.ad-panel-right {
+right: 0;
+}

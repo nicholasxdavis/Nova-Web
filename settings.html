@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+    <link rel="stylesheet" type="text/css" href="./background/settings.css">
+</head>
+
+<body class="light-mode">
+    <div class="header">
+        <a href="index.html">
+            <img src="./icons/back.png" alt="backicon" width="50" height="50" id="backicon">
+        </a>
+    </div>
+
+    <div id="versionInfo">Version 1.2.1</div>
+    <a href="https://paypal.me/amongyourself1" target="_blank">
+        <div id="authorInfo">Donate <3</div>
+    </a>
+
+    <!-- Settings Form -->
+    <form id="settingsForm">
+        <!-- Output Name Option -->
+        <label for="outputName">Output Name:</label>
+        <input type="text" id="outputName" name="outputName" placeholder="Enter output name">
+
+        <label for="resolution">Output Resolution: Coming Soon / Not supported</label>
+        <select id="resolution" name="resolution">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <!-- Add more resolution options as needed -->
+        </select>
+        <!-- Watermark Mode Option -->
+        <label for="imageUpload">Watermark Mode: Coming Soon / Not supported</label>
+        <div class="upload-container">
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+            <label class="switch" for="watermarkToggle">
+                <input type="checkbox" id="watermarkToggle" name="watermarkToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <br>
+        <!-- Add your other form elements here based on the previous response -->
+
+        <!-- Submit button -->
+        <input type="submit" value="Save Settings">
+    </form>
+
+    <!-- Dark-Light Mode Switch -->
+
+
+    <!-- Include your script.js -->
+    <script src="background\settings.js"></script>
+</body>
+
+</html>

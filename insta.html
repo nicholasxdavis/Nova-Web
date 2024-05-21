@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Instagram Downloader</title>
+    <link rel="stylesheet" href="insta.css">
+</head>
+<body>
+    <header>
+        <h1>Instagram Downloader Testing</h1>
+    </header>
+    <main>
+        <div id="downloadForm">
+            <input type="text" id="postUrl" placeholder="Paste Instagram post URL here">
+            <button id="mybutton">DOWNLOAD</button>
+        </div>
+        <div id="infoText">
+            <p>Average download time: 30ms. Simply paste the URL and hit the download button!</p>
+        </div>
+        <div class="ad-panel-left">
+        <img src="./icons/ad_image_left.png" alt="Advertisement Left2" width="180" height="180">
+        <img src="./icons/ad_image_left.png" alt="Advertisement Left" width="180" height="180">
+    </div>
+
+    <div class="ad-panel-right">
+        <img src="./icons/ad_image_right.png" alt="Advertisement Right2" width="180" height="180">
+        <img src="./icons/ad_image_right.png" alt="Advertisement Right" width="180" height="180">
+    </div>
+        <div id="console" class="fallout-console">
+            <h2 id="console-title">Console</h2>
+            <div class="console-output"></div>
+            <input type="text" id="console-input" class="console-input" placeholder="Type here..." autofocus>
+        </div>
+    </main>
+    <script src="background/insta.js"></script>
+    <script src="background/console.js"></script>
+</body>
+</html>

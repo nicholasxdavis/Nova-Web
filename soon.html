@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .coming-soon {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .login-container {
+    text-align: center;
+  }
+
+  .login-container h1 {
+    color: white;
+  }
+
+  .login-container input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .login-container input[type="submit"]:hover {
+    background-color: #6A1BB2;
+  }
+
+  .login-container input[type="submit"][disabled] {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+
+  #title-container {
+    text-align: center;
+    margin: 10px 0;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .title-link {
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #8A2BE2;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid #8A2BE2;
+    border-radius: 4px;
+    text-decoration-thickness: 2px;
+  }
+
+  .title-link:hover {
+    background-color: #8A2BE2;
+    color: #FFFFFF;
+  }
+
+  .bottom-text {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+  .ad-panel-left, .ad-panel-right {
+width: 200px;
+/* Adjust width as needed */
+height: 400px;
+/* Adjust height as needed */
+margin: 10px;
+/* Adjust margin as needed */
+padding: 10px;
+/* Adjust padding as needed */
+position: fixed;
+top: 50%;
+transform: translateY(-50%);
+/* Add additional styling as needed */
+}
+.ad-panel-left {
+left: 0;
+}
+.ad-panel-right {
+right: 0;
+}
+</style>
+</head>
+<body>
+  <div id="title-container">
+    <span class="title-text" id="imgConverter"><a href="index.html" class="title-link">Image Converter</a></span>
+    <span class="title-text" id="videoConverter"><a href="video.html" class="title-link">Video Converter</a></span>
+    <span class="title-text" id="audioConverter"><a href="audio.html" class="title-link">Audio Converter</a></span>
+  </div>
+  <div class="ad-panel-left">
+        <img src="./icons/ad_image_left.png" alt="Advertisement Left2" width="180" height="180">
+    <img src="./icons/ad_image_left.png" alt="Advertisement Left" width="180" height="180">
+    </div>
+
+    <div class="ad-panel-right">
+        <img src="./icons/ad_image_right.png" alt="Advertisement Right2" width="180" height="180">
+    <img src="./icons/ad_image_right.png" alt="Advertisement Right" width="180" height="180">
+    </div>
+  <div class="coming-soon">Coming soon.</div>
+  
+  <div class="login-container">
+    <h1>Closed Testing</h1>
+    <form id="login-form">
+      <input type="submit" value="Proceed" id="login-button" disabled>
+    </form>
+    <div id="error-message" style="display: none; color: red;"></div>
+  </div>
+
+  <div class="bottom-text">
+    If you're using an adblocker please consider disabling it! Our website is a free-to-use tool and relies on ads to support its operation.
+    <br>
+    Donate here: <a href="https://example.com/donate" target="_blank">Donate</a>
+  </div>
+
+  <script>
+    function isAllowedIP(ip) {
+      // List of allowed IP addresses
+      const allowedIPs = ["1227.0.0.1", "1922.168.0.1"]; // Add your whitelist IP addresses here
+
+      return allowedIPs.includes(ip);
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Simulating getting user's IP address
+      const userIP = "1227.0.0.1"; // You would replace this with a method to get the user's actual IP address
+
+      if (isAllowedIP(userIP)) {
+        window.location.href = 'insta.html';
+      } else {
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Your IP address is not allowed to access this content.';
+      }
+    });
+
+    // Enable login button if the user's IP is allowed
+    const loginButton = document.getElementById('login-button');
+    const userIP = "127.0.0.1"; // You would replace this with a method to get the user's actual IP address
+    if (isAllowedIP(userIP)) {
+      loginButton.removeAttribute('disabled');
+    }
+  </script>
+</body>
+</html>
