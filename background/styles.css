@@ -397,3 +397,11 @@ position: absolute;
 		body.dark-mode #imgConverter {
             color: white;
         }
+        @media only screen and (max-width: 768px) {
+    .ad-panel-left, .ad-panel-right {
+        display: none;
+    }
+@media only screen and (max-width: 768px) {
+     #title-container {
+        display: none;
+    }
